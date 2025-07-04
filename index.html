@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="h-con">
+            <h3>Hello, I am</h3>
+            <h1>Sania Reang</h1>
+            <h3>a Computer Science student at<span> NIT Agartala</span></h3>
+            <p> with a passion for technology and continuous learning. I aim to develop innovative solution and grow as a professional in tech industry.
+            </p>
+            <div class="media">
+                <a href="#"><i class="fa-solid fa-phone" id="alertIcon"></i></a>
+                <a href="www.linkedin.com/in/saniareang"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/SA-niaaa"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+        <div class="h-img">
+            <img src="./images/picofme (3).png" alt="photo"/>
+        </div>
+    </section>
+    <!--about-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="./images/picofme (14).png"/>
+        </div>
+        <div class="about-me">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Computer Science Student</h3>
+            <p>I am Sania Reang, currently pursuing Computer Science Engineering at NIT Agartala. I have a strong 
+              interest in technology, web development, and problem-solving. I am focused on enhancing my technical
+              knowledge and developing problem-solving skills to contribute effectively in dynamic and collaborative
+              environment.
+            </p>
+        </div>
+    </section>
+    <!--skills-->
+    <section class="skill" id="skill">
+        <h2 class="heading">Core<span> Skills</span></h2>
+        <div class="ski-con">
+            <div class="ski-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Building responsive and user-friendly websites with clean design and optimized performance. Skilled in HTML, CSS, JavaScript, and modern web technologies to create interactive and visually
+                appealing web application.</p>
+            </div>
+            <div class="ski-box">
+                <i class="fa-solid fa-c"></i>
+                <h3>Programming</h3>
+                <p>Strong foundation in programming concepts and problem-solving using C, C++. Solved 250+ DSA problems to strengthen logical thinking and coding efficiency.</p>
+            </div>
+        </div>
+    </section>
+    <!--porjects-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest<span> Project</span></h2>
+        <div class="port-con">
+            <div class="port-box">
+                <img src="./images/code.jpg"/>
+                <div class="port-layer">
+                <h4>Code Editor</h4>
+                <a href="http://127.0.0.1:5500/CodeEditor.html"><i class="fa-solid fa-arrow-up-right-from-square " id="first"></i></a>
+                </div>
+            </div>
+            <div class="port-box">
+                <img src="./images/portfoli.jpg"/>
+                <div class="port-layer">
+                <h4>Resposive Portfolio</h4>
+                <a href="http://127.0.0.1:5500/portfolio.html"><i class="fa-solid fa-arrow-up-right-from-square" id="second"></i></a>
+                </div>
+            </div>
+            <div class="port-box">
+                <img src="./images/flim.png"/>
+                <div class="port-layer">
+                <h4>CineVerse</h4>
+                <a href="http://127.0.0.1:5500/moviesWeb.html"><i class="fa-solid fa-arrow-up-right-from-square" id="third"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span> Me</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2025 Code Editor | Designed by Sania Reang</p>
+        </div>
+        <div class="footer-icon">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>        
+</body>
+</html>

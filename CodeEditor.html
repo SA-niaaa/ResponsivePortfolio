@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+    :root {
+      --bg-color: #03001C;
+      --second-bg-color: #1b152f;
+      --text-color: #fff;
+      --main-color: #89eccd;
+    }
+    html {
+      font-size: 63%;
+      overflow-x: hidden;
+    }
+    body {
+      color: var(--text-color);
+      background-color: var(--bg-color);
+    }
+    section {
+      padding: 4rem 6% 1rem;
+    }
+    span {
+      color: var(--main-color);
+    }
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .box img {
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      object-fit: contain;
+      transition: 0.5s ease;
+    }
+    .para {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .para .head h2 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .para .info {
+      flex: 1 1 30rem;
+      background-color: var(--second-bg-color);
+      padding: 2rem;
+      border-radius: 2rem;
+      text-align: center;
+      border: 0.2rem solid var(--bg-color);
+      transition: 0.5s ease;
+    }
+    .para .info:hover {
+      border-color: var(--main-color);
+      transform: scale(1.02);
+    }
+    .info p {
+      font-size: 1.8rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    footer {
+      background-color: var(--second-bg-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1.4rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      html { font-size: 55%; }
+      .box { flex-direction: column; gap: 2rem; }
+      section { padding: 3rem 5% 1rem; }
+    }
+    @media (max-width: 480px) {
+      html { font-size: 50%; }
+      .para .head h2 { font-size: 3.2rem; }
+      .info p { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="pic" id="pic">
+    <div class="box">
+      <img src="./images2/code.jpeg" />
+    </div>
+  </section>
+
+  <section class="para" id="para">
+    <div class="head">
+      <h2>Code<span> Editor</span></h2>
+    </div>
+    <div class="info">
+      <p>A lightweight and functional web-based code editor created with HTML, CSS, and JavaScript that enables users to write, edit, and preview HTML, CSS, and JavaScript code in real time. The editor features separate panels for each language and an integrated live preview window, allowing immediate visualization of the output as users type. It incorporates iframe rendering for dynamic output, event listeners for real-time updates, and a responsive interface to ensure usability on both desktop and mobile devices. Designed as a practical tool for beginners and enthusiasts, it highlights core web development concepts such as, DOM events, and cross-browser compatibility. This project reflects the ability to create interactive web tools while maintaining simplicity and performance.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Code Editor | Designed by Sania Reang
+  </footer>
+  <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  ScrollReveal({
+    reset: true, distance: '80px', duration: 2000, delay: 200
+});
+
+  ScrollReveal().reveal('.box', {origin: 'top'});
+
+  ScrollReveal().reveal('.info', {origin: 'bottom'});
+
+  ScrollReveal().reveal('.para', {origin: 'left'});
+</script>
+
+</body>
+</html>
