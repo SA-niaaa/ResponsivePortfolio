@@ -17,7 +17,7 @@
     --main-color: #89eccd;
 }
 html{
-    font-size: 63%;
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 body{
@@ -119,7 +119,7 @@ span{
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
 .btn:hover {
     box-shadow: none;
@@ -206,7 +206,7 @@ span{
 .port-box img{
     height: 300px;
     width: 100%;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
 .port-box:hover img{
     transform: scale(1.1);
@@ -225,7 +225,7 @@ span{
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
 .port-box:hover .port-layer{
     transform: translateY(0);
@@ -301,7 +301,7 @@ span{
     padding: 0.8rem;
     background: var(--main-color);
     border-radius: 0.8rem;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
 .footer-icon a:hover {
     box-shadow: 0 0 1rem var(--main-color);
@@ -310,82 +310,137 @@ span{
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
-@media(max-width: 1200px){
+/*  Large screens  */
+@media (max-width: 1200px){
     html{
         font-size: 55%;
     }
 }
+
+/*  Tablets / small laptops  */
 @media (max-width: 990px){
     .header{
         padding: 2rem 3%;
     }
+
     section{
         padding: 10rem 3% 2rem;
     }
+
     .skill{
         padding-bottom: 7rem;
     }
+
     .contact{
         min-height: auto;
     }
+
     .footer{
         padding: 2rem 3%;
     }
 }
-@media (max-width: 770px){
+
+/*  Tablets & mobiles  */
+@media (max-width: 768px){
+
+    /* Home section */
     .home{
         flex-direction: column;
     }
+
     .h-con h3{
         font-size: 2.6rem;
     }
+
     .h-con h1{
         font-size: 5rem;
     }
+
     .h-img img{
         width: 70vw;
         margin-top: 4rem;
     }
+
+    /* About section */
     .about{
         flex-direction: column-reverse;
     }
+
     .about img{
         width: 70vw;
         margin-top: 4rem;
     }
-    .skill h2{
-        margin-bottom: 3rem;
-    }
+
+    /* Section spacing */
+    .skill h2,
     .portfolio h2{
         margin-bottom: 3rem;
     }
-    .port-cont{
+
+    /* Portfolio */
+    .port-con{
         flex-wrap: wrap;
     }
+
+    /*  Mobile Navbar  */
+    #menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        display: none;
+        flex-direction: column;
+        padding: 1rem 0;
+        z-index: 99;
+    }
+
+    .navbar a{
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .navbar.active{
+        display: flex;
+    }
 }
+
+/*  Small phones  */
 @media (max-width: 620px){
     .port-con{
         flex-direction: column;
     }
 }
+
+/*  Very small phones  */
 @media (max-width: 450px){
     html{
         font-size: 50%;
     }
+
     .contact form .input-box input{
         width: 100%;
     }
 }
-@media(max-width: 365){
-    .home-img img{
+
+/*  Extra small devices  */
+@media (max-width: 365px){
+    .home-img img,
+    .about-img img{
         width: 90vw;
     }
-    .about-img img {
-        width: 90vw;
-    }
+
     .footer{
         flex-direction: column-reverse;
     }
+
     .footer p{
         text-align: center;
         margin-top: 2rem;

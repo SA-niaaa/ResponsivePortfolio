@@ -1,28 +1,53 @@
+// SECTION & NAV ACTIVE LINK HANDLING 
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const header = document.querySelector('.header');
 
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-let header = document.querySelector('header');
+//MOBILE NAVBAR ELEMENTS
+const menuIcon = document.getElementById('menu');
+const navbar = document.querySelector('.navbar');
 
+// MOBILE NAVBAR TOGGLE
+if (menuIcon && navbar) {
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('fa-xmark'); // bars -> close icon
+    navbar.classList.toggle('active');     // show/hide menu
+  });
+}
 
+// SCROLL EVENTS
 window.onscroll = () => {
+
+  // Close mobile menu on scroll
+  if (menuIcon && navbar) {
+    menuIcon.classList.remove('fa-xmark');
+    navbar.classList.remove('active');
+  }
+
   let top = window.scrollY;
 
+  // Active section highlighting
   sections.forEach(sec => {
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute('id');
 
     if (top >= offset && top < offset + height) {
       navLinks.forEach(link => link.classList.remove('active'));
-      let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+
+      const activeLink = document.querySelector(
+        `header nav a[href*="${id}"]`
+      );
+
       if (activeLink) activeLink.classList.add('active');
     }
   });
 
+  // Sticky header
   header.classList.toggle('sticky', top > 100);
 };
 
-
+// ALERT ICON
 const icon = document.getElementById('alertIcon');
 if (icon) {
   icon.addEventListener('click', () => {
@@ -30,7 +55,7 @@ if (icon) {
   });
 }
 
-
+// SCROLL REVEAL ANIMATIONS
 if (typeof ScrollReveal !== 'undefined') {
   ScrollReveal({
     reset: true,
